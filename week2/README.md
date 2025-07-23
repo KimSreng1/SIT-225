@@ -32,20 +32,55 @@ This Python script connects to the Arduino Nano 33 IoT via Serial (COM port), re
 3. Run the script:
    ```bash
    python log_accelerometer.py
+📊 Python Notebook
+week2_notebook.ipynb
+A Jupyter Notebook that demonstrates how to load data and visualize it using matplotlib. Includes example plots using randomly generated values.
 
+accel_data.py / accel_data.ipynb
+This script was used to analyze and visualize long-term acceleration data for Task 2.1P.
 
-## 📊 Python Notebook
+Features:
 
-### `week2_notebook.ipynb`
-A Jupyter Notebook that demonstrates how to load data and visualize it using `matplotlib`. Includes example plots using randomly generated values.
+Loads real-time accelerometer data from accel_data.csv
 
-## 📝 Notes
+Displays first 5 rows and basic statistics (mean, std, etc.)
 
-- All Arduino sketches are compatible with **Arduino Nano 33 IoT**.
-- Ensure VUSB pads are shorted to supply 5V power to DHT22 and HC-SR04 sensors.
-- Install required libraries:
-  - For DHT22: `DHT sensor library by Adafruit`
-  - For Accelerometer: `Arduino_LSM6DS3`
-  - For Python notebook: `matplotlib`, `pandas` (if using real CSV)
+Plots acceleration over time for X, Y, and Z axes
 
+Example output:
+
+When stationary, the Z-axis remains mostly stable
+
+X and Y axes show clear spikes when the board is moved
+
+📸 Task 2.1P Analysis Summary
+Prediction (before graphing):
+I believe the Z-axis will remain relatively stable while the board is stationary, while X and Y may show small fluctuations. When the board is moved or rotated, X, Y, and Z will show distinct spikes. I expect clear visual differences between stationary and movement periods in the graph.
+
+Observation (after plotting):
+The resulting plot confirmed the prediction. The Z-axis stayed relatively constant during periods of no movement, while X and Y showed spikes when the board was tilted or shaken. The visual change clearly indicated periods of motion.
+
+Proof:
+Screenshot of the plotted graph was captured and included as evidence
+
+Graph includes labels, legend, and timestamp values
+
+CSV file and plotting script are included in this repo
+
+📝 Notes
+All Arduino sketches are compatible with Arduino Nano 33 IoT.
+
+Ensure VUSB pads are shorted to supply 5V power to DHT22 and HC-SR04 sensors.
+
+Install required libraries:
+
+For DHT22: DHT sensor library by Adafruit
+
+For Accelerometer: Arduino_LSM6DS3
+
+For Python notebook: matplotlib, pandas (if using real CSV)
+
+yaml
+Copy
+Edit
 ---
