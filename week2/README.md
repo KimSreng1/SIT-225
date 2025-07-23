@@ -80,7 +80,4 @@ For Accelerometer: Arduino_LSM6DS3
 
 For Python notebook: matplotlib, pandas (if using real CSV)
 
-yaml
-Copy
-Edit
----
+
