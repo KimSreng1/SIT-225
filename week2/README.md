@@ -13,6 +13,24 @@ Uses the HC-SR04 ultrasonic sensor (Trig: D9, Echo: D10) to measure distance and
 ### 3. `accelerometer.ino`
 Reads real-time X, Y, and Z axis acceleration from the built-in LSM6DS3 sensor on the Arduino Nano 33 IoT board. Displays data via Serial Monitor.
 
+## 🐍 Python Script: `log_accelerometer.py`
+
+This Python script connects to the Arduino Nano 33 IoT via Serial (COM port), reads X, Y, Z acceleration data from the LSM6DS3 sensor, adds a timestamp in the format `YYYYMMDDHHMMSS`, and logs it to a CSV file.
+
+### How it works:
+- Listens to data like: `0.0123,-0.0456,1.0001`
+- Adds current time: `20250723120030`
+- Saves to file as:  
+  `20250723120030,0.0123,-0.0456,1.0001`
+
+### How to run it:
+1. Upload the Arduino sketch (`lsm6ds3_logger.ino`) to the board.
+2. Close the Serial Monitor.
+3. Run the script:
+   ```bash
+   python log_accelerometer.py
+
+
 ## 📊 Python Notebook
 
 ### `week2_notebook.ipynb`
